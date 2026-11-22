@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#082721" />
+  <meta name="description" content="Một lời tỏ tình ngọt ngào trong mùa Giáng sinh." />
+  <title>Christmas Love Letter 🎄</title>
+  <link rel="stylesheet" href="css/style.css?v=vi-font-2" />
+  <script defer src="js/config.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body class="page-question">
+  <div class="snow-layer" id="snowLayer" aria-hidden="true"></div>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="hanging-ornament ornament-one" aria-hidden="true"></div>
+  <div class="hanging-ornament ornament-two" aria-hidden="true"></div>
+
+  <div class="site-wrap">
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Về trang Giáng sinh">
+        <span class="brand-symbol" aria-hidden="true">✳</span>
+        <span>little <strong>christmas</strong> wish<span class="brand-period">.</span></span>
+      </a>
+      <span class="topbar-note"><span class="twinkle" aria-hidden="true">✦</span> made with love & holiday magic</span>
+    </header>
+
+    <!-- Vùng meme bao quanh lá thư trên máy tính; hiển thị dạng lưới ở điện thoại. -->
+    <main class="question-scene" id="questionScene">
+      <div class="meme-field" id="memeField" aria-label="Các meme xuất hiện khi bấm No"></div>
+
+      <div class="center-stage">
+        <section class="wish-card" aria-labelledby="mainQuestion">
+          <div class="card-star star-top" aria-hidden="true">✧</div>
+          <div class="card-star star-bottom" aria-hidden="true">✧</div>
+          <div class="mini-ornaments" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="section-tag"><span class="tag-diamond">✦</span> A VERY SPECIAL QUESTION <span class="tag-diamond">✦</span></div>
+          <p class="letter-kicker">Gửi em, người anh thương 🎄</p>
+          <h1 id="mainQuestion">Giáng sinh này,<br /><em>em làm người yêu anh</em><br />nhé? ❤️</h1>
+
+          <div class="central-gif-frame">
+            <span class="gif-sparkle gif-sparkle-left" aria-hidden="true">✧</span>
+            <img src="cat.gif" alt="GIF chú mèo dễ thương chờ câu trả lời" />
+            <span class="gif-sparkle gif-sparkle-right" aria-hidden="true">✦</span>
+          </div>
+          <p class="wish-copy">Noel này, anh chỉ mong có em. <span aria-hidden="true">♡</span></p>
+
+          <div class="buttons-area" role="group" aria-label="Chọn câu trả lời">
+            <button type="button" class="answer-btn yes-btn" id="yesButton"><span>YES ❤️</span><span class="btn-icon" aria-hidden="true">♥</span></button>
+            <button type="button" class="answer-btn no-btn" id="noButton"><span>NO</span><span aria-hidden="true">🥺</span></button>
+          </div>
+          <div class="answer-message" id="answerMessage" role="status" aria-live="polite">
+            <span class="message-icon" aria-hidden="true">✧</span>
+            <span>Anh đang chờ câu trả lời của em... ♡</span>
+          </div>
+          <p class="meme-hint" id="memeHint">Em thử nhấn No xem anh sẽ làm gì nhé! ✨</p>
+          <div class="card-signature"><span>sealed with love</span><span aria-hidden="true">❦</span></div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer"><span aria-hidden="true">✦</span> ONE LITTLE WISH, A THOUSAND BUTTERFLIES <span aria-hidden="true">✦</span></footer>
+  </div>
+
+  <!-- Trang kết quả được nạp sẵn: bấm Yes sẽ bật nhạc và đổi nội dung ngay,
+       không tải trang khác (tránh bị trình duyệt ngắt hoặc chặn âm thanh). -->
+  <template id="celebrationTemplate">
+<main class="celebration-layout">
+      <section class="celebration-card" aria-labelledby="celebrationTitle">
+        <span class="party-sparkle sparkle-one" aria-hidden="true">✧</span>
+        <span class="party-sparkle sparkle-two" aria-hidden="true">✦</span>
+        <span class="party-sparkle sparkle-three" aria-hidden="true">✳</span>
+        <div class="celebration-copy">
+          <div class="section-tag"><span class="tag-diamond">✦</span> CHRISTMAS MIRACLE UNLOCKED <span class="tag-diamond">✦</span></div>
+          <p class="letter-kicker">Gửi em, <em>Món quà Noel tuyệt nhất của anh</em></p>
+          <h1 id="celebrationTitle">Cảm ơn em<br /><em>vì đã đồng ý</em></h1>
+          <p class="wish-copy">Hi vọng chúng mình sẽ có một mùa đông không lạnh nhé</p>
+          <p class="love-note"><em>Anh thương em, nhiều hơn cả những điều anh có thể nói.</em></p>
+          <a class="answer-btn back-btn" href="index.html"><span>↶</span> Quay lại câu hỏi</a>
+        </div>
+        <div class="celebration-picture">
+          <div class="celebration-image-heading"><span aria-hidden="true">✴</span> A HAPPILY EVER AFTER <span aria-hidden="true">✴</span></div>
+          <div class="celebration-image-box">
+            <span class="floating-heart heart-a" aria-hidden="true">♥</span>
+            <span class="floating-heart heart-b" aria-hidden="true">♥</span>
+            <!-- GIF lấy trực tiếp từ file love-n.rar do bạn gửi -->
+            <img src="love-n/yes.gif" alt="GIF nhân vật xúc động vì được đồng ý" />
+          </div>
+          <div class="celebration-image-caption">iu Nhã Uyên lắm</div>
+        </div>
+      </section>
+    </main>
+  </template>
+
+  <div class="mobile-meme-peek" id="mobileMemePeek" aria-hidden="true"><img id="mobileMemePeekImage" alt="" /></div>
+
+  <dialog class="meme-dialog" id="memeDialog" aria-label="Xem ảnh meme lớn">
+    <button class="dialog-close" type="button" id="closeMemeButton" aria-label="Đóng ảnh">×</button>
+    <img id="largeMemeImage" src="" alt="Ảnh meme phóng to" />
+  </dialog>
+  <button type="button" class="music-toggle" id="musicToggle" hidden aria-label="Bật hoặc tắt nhạc">♫ Bật nhạc</button>
+</body>
+</html>

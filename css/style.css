@@ -1,0 +1,449 @@
+/* =============================================================
+   CHRISTMAS LOVE LETTER • BẢNG MÀU: THÔNG XANH / ĐỎ NOEL / VÀNG KIM
+   Không dùng ảnh hay thư viện bên ngoài, chạy trực tiếp bằng index.html.
+   ============================================================= */
+:root {
+  --forest: #082720;
+  --forest-deep: #031813;
+  --evergreen: #0e3a32;
+  --green-muted: #2b6356;
+  --red: #b63c4a;
+  --red-bright: #dc5960;
+  --gold: #f2d38c;
+  --gold-deep: #cba45c;
+  --cream: #fff8e9;
+  --cream-dark: #eee1c6;
+  --ink: #223930;
+  --shadow: 0 28px 70px rgba(0, 12, 10, .38);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--cream);
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background:
+    radial-gradient(ellipse at 12% 8%, rgba(67, 141, 110, .29), transparent 34%),
+    radial-gradient(ellipse at 92% 90%, rgba(163, 53, 57, .22), transparent 34%),
+    radial-gradient(ellipse at 58% 45%, rgba(31, 87, 71, .25), transparent 55%),
+    linear-gradient(135deg, #051e1b, #092d28 58%, #061d1e);
+}
+body::after {
+  content: ""; position: fixed; z-index: -1; inset: 0; pointer-events: none;
+  background-image: repeating-linear-gradient(0deg, rgba(255, 255, 255, .018) 0 1px, transparent 1px 7px);
+}
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font-family: inherit; }
+a { color: inherit; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+[hidden] { display: none !important; }
+.ambient { position: fixed; width: 340px; height: 340px; border-radius: 50%; filter: blur(90px); pointer-events: none; z-index: -2; }
+.ambient-one { top: -160px; left: -125px; background: rgba(39, 142, 97, .22); }
+.ambient-two { bottom: -200px; right: -110px; background: rgba(186, 59, 62, .20); }
+.site-wrap { width: min(1160px, calc(100% - 56px)); margin: 0 auto; position: relative; z-index: 1; }
+.topbar { min-height: 96px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.brand { text-decoration: none; font-weight: 600; font-size: 19px; letter-spacing: -.055em; display: inline-flex; align-items: center; gap: 11px; white-space: nowrap; }
+.brand strong { color: var(--gold); font-weight: 750; }
+.brand-period { color: var(--red-bright); }
+.brand-symbol { display: inline-grid; place-items: center; width: 36px; height: 36px; border: 1px solid rgba(250, 217, 150, .68); color: var(--gold); border-radius: 50%; font-size: 24px; line-height: 1; box-shadow: 0 0 0 5px rgba(250, 217, 150, .05); }
+.topbar-note { display: flex; align-items: center; gap: 8px; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; opacity: .73; }
+.twinkle { color: var(--gold); font-size: 15px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.07fr) minmax(0, .90fr); gap: 26px; align-items: stretch; }
+.wish-card {
+  min-width: 0; min-height: 645px; position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(151deg, rgba(15, 62, 50, .98), rgba(6, 33, 30, .96) 65%);
+  border: 1px solid rgba(242, 211, 140, .42); border-radius: 28px;
+  box-shadow: var(--shadow), inset 0 0 0 7px rgba(252, 241, 209, .025);
+  padding: 58px 53px 29px;
+  display: flex; align-items: flex-start; flex-direction: column;
+}
+.wish-card::before { content: ""; position: absolute; border: 1px solid rgba(242, 211, 140, .13); inset: 13px; border-radius: 18px; z-index: -1; pointer-events: none; }
+.wish-card::after { content: ""; position: absolute; width: 460px; height: 460px; right: -255px; top: 70px; border: 1px solid rgba(242, 211, 140, .13); border-radius: 50%; box-shadow: 0 0 0 43px rgba(242, 211, 140, .018), 0 0 0 88px rgba(242, 211, 140, .015), 0 0 0 136px rgba(242, 211, 140, .01); z-index: -1; }
+.section-tag { display: inline-flex; gap: 9px; align-items: center; color: var(--gold); font-size: 10px; letter-spacing: .16em; font-weight: 800; white-space: nowrap; }
+.tag-diamond { color: #f4c37a; }
+.letter-kicker { margin: 48px 0 15px; font-size: 15px; color: #f0dcc0; font-style: normal; opacity: .88; }
+h1 { font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-weight: 700; letter-spacing: -.012em; }
+.wish-card h1 { font-size: clamp(41px, 4.2vw, 69px); line-height: 1.12; margin: 0; position: relative; }
+h1 em { font-family: inherit; font-style: normal; color: var(--gold); font-weight: 700; }
+.wish-copy { max-width: 490px; font-size: 15px; line-height: 1.85; color: #e8dacc; opacity: .94; }
+.wish-card .wish-copy { margin: 23px 0 31px; }
+.wish-copy span { color: var(--gold); font-size: 23px; line-height: 0; }
+.buttons-area { display: flex; flex-wrap: wrap; gap: 13px; width: 100%; }
+.answer-btn {
+  display: inline-flex; justify-content: center; align-items: center; gap: 14px;
+  min-height: 59px; padding: 13px 25px; border-radius: 15px; border: 1px solid transparent;
+  font-size: 14px; font-weight: 900; letter-spacing: .095em; cursor: pointer;
+  transition: transform .2s ease, background-color .25s ease, box-shadow .25s ease, border-color .2s ease;
+  text-decoration: none; white-space: nowrap;
+}
+.answer-btn:hover { transform: translateY(-3px); }
+.answer-btn:active { transform: translateY(0) scale(.97); }
+.yes-btn { min-width: 205px; color: #fff7ec; background: linear-gradient(135deg, #cc4b55, #a82c40); box-shadow: 0 7px 0 #6e2130, 0 13px 26px rgba(181, 43, 61, .27); border-color: #ed9b93; }
+.yes-btn:hover { background: linear-gradient(135deg, #df626b, #b33449); box-shadow: 0 7px 0 #6e2130, 0 17px 30px rgba(181, 43, 61, .34); }
+.btn-icon { display: grid; place-items: center; border-radius: 50%; width: 29px; height: 29px; font-size: 13px; color: #ac3841; background: #fff2dd; }
+.no-btn { min-width: 130px; color: #1a4032; background: #fff4df; border-color: rgba(230, 200, 145, .65); }
+.no-btn:hover { background: #f6dca9; }
+.answer-message { display: flex; gap: 10px; align-items: flex-start; min-height: 40px; color: #d9e1d4; margin-top: 25px; font-size: 13px; font-style: italic; line-height: 1.6; }
+.message-icon { color: #f2cc80; font-size: 19px; line-height: 1; font-style: normal; }
+.card-signature { margin-top: auto; padding-top: 23px; display: flex; align-items: center; gap: 10px; color: rgba(245, 216, 171, .52); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.card-signature span:last-child { color: var(--gold); font-size: 21px; }
+.card-star { color: rgba(250, 213, 152, .36); position: absolute; font-size: 32px; }
+.star-top { right: 31px; top: 38px; }
+.star-bottom { right: 37px; bottom: 26px; font-size: 25px; }
+.mini-ornaments { position: absolute; right: 58px; top: 0; display: flex; align-items: flex-start; gap: 23px; pointer-events: none; }
+.mini-ornaments span { width: 1px; background: rgba(242, 211, 140, .35); height: 53px; position: relative; }
+.mini-ornaments span::after { content: ""; position: absolute; top: 100%; left: -8px; width: 17px; height: 17px; background: radial-gradient(circle at 30% 25%, #fff6da, #d44d5a 39%, #8b2636 90%); border-radius: 50%; box-shadow: 0 3px 10px #0004; }
+.mini-ornaments span:nth-child(2) { height: 35px; }
+.mini-ornaments span:nth-child(2)::after { background: radial-gradient(circle at 30% 25%, #fff3d6, #dbb26d 39%, #9a6d2f 90%); }
+.mini-ornaments span:nth-child(3) { height: 76px; }
+.mini-ornaments span:nth-child(3)::after { background: radial-gradient(circle at 30% 25%, #f4ead4, #45876a 39%, #1d5344 90%); }
+.picture-stack { min-width: 0; display: flex; flex-direction: column; gap: 15px; }
+.cat-card { min-width: 0; background: linear-gradient(145deg, #fff9e9, #f3e9d3); color: var(--ink); border-radius: 28px; padding: 25px 26px 19px; border: 1px solid #f3dfb2; box-shadow: var(--shadow); transition: padding .35s ease; }
+.image-card-heading, .meme-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 10px; letter-spacing: .17em; font-weight: 850; }
+.image-card-heading > span:first-child { display: inline-flex; align-items: center; gap: 9px; }
+.image-card-heading > span:first-child > span { color: #b64c4b; font-size: 19px; }
+.postcard-stamp { color: #9b8d74; letter-spacing: .07em; white-space: nowrap; }
+.cat-frame { position: relative; height: 415px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-top: 21px; border-radius: 19px; border: 2px dashed rgba(194, 156, 103, .5); background: radial-gradient(circle at 50% 43%, #fffcf0 15%, #e7efe5 68%, #dfeadd); transition: height .38s ease; }
+.cat-frame::before, .cat-frame::after { content: ""; position: absolute; width: 120px; height: 120px; border: 3px solid rgba(188, 68, 77, .12); border-radius: 50%; }
+.cat-frame::before { top: -85px; left: -65px; }
+.cat-frame::after { bottom: -85px; right: -65px; }
+.cat-frame img { display: block; max-width: 95%; max-height: 95%; height: auto; width: auto; object-fit: contain; filter: drop-shadow(0 10px 13px rgba(24, 39, 33, .12)); }
+.corner-sparkle { position: absolute; z-index: 2; color: #be9b50; font-size: 30px; }
+.upper-left { top: 11px; left: 14px; }.lower-right { bottom: 8px; right: 14px; }
+.cat-caption { margin-top: 17px; display: flex; align-items: center; justify-content: center; gap: 9px; color: #655a46; font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-style: normal; font-size: 14px; text-align: center; }
+.caption-heart { color: #c34752; font-size: 18px; font-style: normal; }
+.picture-stack.has-meme .cat-card { padding-top: 18px; padding-bottom: 15px; }
+.picture-stack.has-meme .cat-frame { height: 220px; margin-top: 13px; }
+.picture-stack.has-meme .cat-caption { margin-top: 10px; font-size: 12px; }
+.meme-card { overflow: hidden; border-radius: 24px; background: linear-gradient(135deg, #fff9ea, #efe3c9); color: var(--ink); padding: 17px 20px; box-shadow: var(--shadow); border: 1px solid #e3cd9e; }
+.meme-header { margin-bottom: 11px; }
+.meme-kicker { display: inline-flex; align-items: center; gap: 8px; color: #8b4041; letter-spacing: .09em; }
+.meme-counter { color: #fff7ea; background: #b84651; border-radius: 99px; padding: 5px 10px; white-space: nowrap; letter-spacing: .05em; }
+.meme-image-button { cursor: zoom-in; width: 100%; border: 0; border-radius: 13px; background: #fff; display: flex; align-items: center; justify-content: center; height: 173px; overflow: hidden; padding: 5px; }
+.meme-image-button:hover { outline: 2px solid #d29e75; }
+.meme-image-button img { display: block; max-width: 100%; max-height: 100%; object-fit: contain; }
+.meme-bottom { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-top: 11px; }
+.meme-bottom p { margin: 0; font-size: 12px; color: #53483b; font-weight: 700; line-height: 1.5; }
+.meme-bottom span { color: #897d69; white-space: nowrap; font-size: 10px; }
+.pop-in { animation: pop-in .32s ease backwards; }
+@keyframes pop-in { from { opacity: .6; transform: translateY(9px) scale(.985); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.site-footer { min-height: 79px; display: flex; align-items: center; justify-content: center; gap: 15px; text-align: center; font-size: 10px; letter-spacing: .2em; color: rgba(255, 246, 220, .6); }
+.site-footer span { color: var(--gold); }
+/* Khung phóng to meme */
+.meme-dialog { padding: 35px 23px 22px; max-width: min(90vw, 800px); max-height: 90vh; border: 1px solid var(--gold); border-radius: 20px; background: #fff8e9; box-shadow: 0 28px 70px #0009; }
+.meme-dialog::backdrop { background: rgba(0, 14, 12, .78); backdrop-filter: blur(7px); }
+.meme-dialog img { display: block; width: auto; max-width: 100%; height: auto; max-height: calc(90vh - 65px); margin: auto; object-fit: contain; }
+.dialog-close { position: absolute; right: 8px; top: 6px; width: 32px; height: 32px; border-radius: 50%; border: 0; background: #ad3b48; color: white; font-size: 24px; cursor: pointer; }
+.music-toggle { position: fixed; right: 22px; bottom: 22px; z-index: 10; cursor: pointer; background: var(--cream); color: var(--forest); border: 2px solid var(--gold); padding: 11px 15px; border-radius: 99px; box-shadow: 0 5px 22px #0003; font-size: 13px; font-weight: 750; }
+/* Tuyết và quả châu treo */
+.snow-layer { position: fixed; z-index: 4; inset: 0; overflow: hidden; pointer-events: none; }
+.snowflake { position: absolute; top: -20px; left: var(--x); font-size: var(--size); line-height: 1; color: #fff; opacity: var(--opacity); text-shadow: 0 0 4px #fffc; animation: snow-fall var(--duration) linear var(--delay) infinite; }
+@keyframes snow-fall { from { transform: translate3d(0, -5vh, 0) rotate(0deg); } to { transform: translate3d(var(--drift), 110vh, 0) rotate(360deg); } }
+.hanging-ornament { position: fixed; z-index: 0; width: 38px; height: 38px; border-radius: 50%; top: 97px; box-shadow: inset -10px -13px 15px rgba(60, 2, 12, .38), 0 5px 20px #0004; opacity: .83; pointer-events: none; }
+.hanging-ornament::before { content: ""; position: absolute; height: 120px; width: 1px; background: linear-gradient(180deg, transparent, var(--gold)); bottom: calc(100% + 6px); left: 50%; }
+.hanging-ornament::after { content: ""; position: absolute; width: 11px; height: 7px; border-radius: 3px 3px 0 0; background: var(--gold); bottom: calc(100% - 1px); left: calc(50% - 5.5px); }
+.ornament-one { left: max(15px, calc((100% - 1290px) / 2)); background: radial-gradient(circle at 25% 25%, #fff7d3 1%, #e3656e 20%, #a52435 80%); }
+.ornament-two { right: max(15px, calc((100% - 1300px) / 2)); top: 152px; width: 26px; height: 26px; background: radial-gradient(circle at 25% 25%, #fff7d3 1%, #d6b16d 36%, #91661d 88%); }
+.ornament-two::before { height: 165px; }
+/* Trang kết quả YES */
+.celebration-layout { min-height: min(680px, calc(100vh - 178px)); display: flex; align-items: center; }
+.celebration-card { width: 100%; position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .9fr); gap: 25px; align-items: center; padding: 54px 51px; overflow: hidden; background: linear-gradient(137deg, #124535, #092d29 60%, #10382d); border: 1px solid rgba(242, 211, 140, .5); border-radius: 30px; box-shadow: var(--shadow); }
+.celebration-card::before { content: ""; position: absolute; inset: 14px; border: 1px solid rgba(242, 211, 140, .14); border-radius: 20px; pointer-events: none; }
+.celebration-card::after { content: ""; position: absolute; right: -160px; bottom: -350px; width: 600px; height: 600px; border-radius: 50%; border: 1px solid rgba(242, 211, 140, .13); box-shadow: 0 0 0 50px rgba(242, 211, 140, .025), 0 0 0 100px rgba(242, 211, 140, .02); z-index: -1; }
+.celebration-copy { padding: 22px 0; }
+.celebration-copy .letter-kicker { margin: 45px 0 16px; }
+.celebration-copy h1 { margin: 0; font-size: clamp(48px, 4.6vw, 75px); line-height: 1.13; }
+.title-heart { color: #df6d70; font-family: Arial, sans-serif; font-size: .8em; }
+.celebration-copy .wish-copy { margin: 23px 0 20px; }
+.love-note { font-size: 15px; line-height: 1.7; color: var(--gold); font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-style: normal; font-weight: 600; letter-spacing: normal; max-width: 460px; }
+.back-btn { background: var(--cream); color: var(--forest); margin-top: 16px; font-size: 12px; min-height: 53px; letter-spacing: .04em; }
+.back-btn:hover { background: var(--gold); }
+.back-btn span { font-size: 24px; font-weight: normal; }
+.celebration-picture { background: linear-gradient(135deg, #fff8e6, #f5e9cd); border-radius: 27px; border: 1px solid #ddbd86; padding: 21px; color: var(--forest); box-shadow: 0 17px 38px #0004; transform: rotate(2deg); }
+.celebration-image-heading { color: #7c5c3c; font-size: 11px; letter-spacing: .13em; font-weight: 900; text-align: center; }
+.celebration-image-heading span { color: #a63e4c; }
+.celebration-image-box { background: radial-gradient(circle at 50% 42%, #fff, #d7eadc); margin-top: 16px; border: 2px dashed #d5b97f; height: 350px; border-radius: 18px; position: relative; display: flex; align-items: center; justify-content: center; }
+.celebration-image-box img { max-width: 90%; max-height: 86%; width: auto; height: auto; object-fit: contain; filter: drop-shadow(0 10px 14px rgba(0, 30, 23, .11)); }
+.floating-heart { position: absolute; color: var(--red); font-size: 36px; animation: heart-float 2.5s ease-in-out infinite; }
+.heart-a { top: 13px; left: 20px; }.heart-b { right: 21px; bottom: 9px; font-size: 28px; animation-delay: -1.2s; }
+@keyframes heart-float { 50% { transform: translateY(-9px) rotate(-12deg); } }
+.celebration-image-caption { padding: 19px 4px 2px; text-align: center; color: #765c40; font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-size: 16px; font-style: normal; }
+.party-sparkle { position: absolute; color: var(--gold); pointer-events: none; }.sparkle-one { right: 35px; top: 20px; font-size: 37px; }.sparkle-two { left: 46%; bottom: 32px; font-size: 24px; }.sparkle-three { left: 44%; top: 24px; font-size: 21px; }
+/* Máy tính bảng */
+@media (max-width: 1050px) {
+  .site-wrap { width: min(960px, calc(100% - 42px)); }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, .84fr); gap: 18px; }
+  .wish-card { padding: 46px 32px 24px; }
+  .wish-card h1 { font-size: clamp(41px, 4.7vw, 58px); }
+  .letter-kicker { margin-top: 45px; }
+  .cat-card { padding: 21px; }
+  .cat-frame { height: 380px; }
+  .celebration-card { padding: 40px 30px; }
+  .celebration-image-box { height: 310px; }
+}
+/* Điện thoại: hiện meme ngay dưới hình mèo, tự cuộn tới ảnh mới */
+@media (max-width: 760px) {
+  .site-wrap { width: min(560px, calc(100% - 28px)); }
+  .topbar { min-height: 75px; }
+  .topbar-note { display: none; }
+  .brand { font-size: 17px; }
+  .hero-grid, .celebration-card { grid-template-columns: 1fr; }
+  .hero-grid { gap: 16px; }
+  .wish-card { min-height: 0; padding: 37px 25px 25px; border-radius: 23px; }
+  .wish-card h1 { font-size: clamp(39px, 8.5vw, 60px); }
+  .letter-kicker { margin-top: 36px; font-size: 14px; }
+  .wish-card .wish-copy { margin: 19px 0 25px; }
+  .section-tag { font-size: 9px; gap: 6px; letter-spacing: .11em; }
+  .card-signature { padding-top: 16px; }
+  .buttons-area { gap: 10px; }
+  .yes-btn { min-width: 0; flex: 1 1 185px; }
+  .no-btn { flex: 0 1 124px; min-width: 100px; }
+  .answer-btn { min-height: 55px; padding: 12px 18px; }
+  .answer-message { margin-top: 17px; }
+  .cat-card { padding: 20px 17px 17px; border-radius: 23px; }
+  .cat-frame { height: 340px; }
+  .picture-stack.has-meme .cat-frame { height: 190px; }
+  .meme-card { border-radius: 20px; }
+  .meme-image-button { height: 220px; }
+  .site-footer { min-height: 66px; letter-spacing: .10em; font-size: 9px; }
+  .hanging-ornament { display: none; }
+  .celebration-layout { min-height: 0; }
+  .celebration-card { padding: 35px 24px; gap: 12px; border-radius: 24px; }
+  .celebration-copy { padding: 5px 0; }
+  .celebration-copy .letter-kicker { margin-top: 31px; }
+  .celebration-copy h1 { font-size: clamp(44px, 9vw, 64px); }
+  .celebration-picture { transform: rotate(0); }
+  .celebration-image-box { height: 310px; }
+}
+@media (max-width: 375px) {
+  .wish-card { padding-left: 20px; padding-right: 20px; }
+  .wish-card h1 { font-size: 37px; }
+  .mini-ornaments { right: 31px; }
+  .meme-bottom { display: block; }
+  .meme-bottom span { display: block; margin-top: 4px; }
+  .celebration-card { padding-left: 17px; padding-right: 17px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* ================================================================
+   BỐ CỤC MỚI: GIF + CÂU HỎI Ở GIỮA, MEME TỎA RA XUNG QUANH
+   ================================================================ */
+.page-question .site-wrap { width: min(1380px, calc(100% - 40px)); }
+.question-scene {
+  position: relative;
+  min-height: 740px;
+  padding: 16px 0 28px;
+  isolation: isolate;
+}
+.center-stage {
+  position: relative;
+  z-index: 2;
+  width: min(505px, 100%);
+  margin: 0 auto;
+}
+.page-question .wish-card {
+  min-height: 0;
+  align-items: center;
+  padding: 43px 43px 26px;
+  text-align: center;
+  box-shadow: 0 24px 70px rgba(0, 15, 11, .54), inset 0 0 0 7px rgba(252, 241, 209, .025);
+}
+.page-question .wish-card .section-tag { justify-content: center; }
+.page-question .wish-card .letter-kicker { margin: 26px 0 14px; }
+.page-question .wish-card h1 { font-size: clamp(40px, 4.2vw, 60px); line-height: 1.12; }
+.central-gif-frame {
+  position: relative;
+  width: min(265px, 100%);
+  height: 213px;
+  margin: 21px auto 0;
+  border: 2px dashed rgba(242, 211, 140, .66);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 43%, #fffdf0, #e3efe3 70%, #d5e6db);
+  box-shadow: inset 0 0 0 8px rgba(255, 252, 232, .23), 0 12px 30px #0003;
+}
+.central-gif-frame img {
+  display: block;
+  height: 94%;
+  max-width: 93%;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px rgba(19, 38, 26, .15));
+}
+.gif-sparkle { position: absolute; color: #bd9a4a; font-size: 25px; }
+.gif-sparkle-left { top: 7px; left: 12px; }
+.gif-sparkle-right { right: 12px; bottom: 6px; }
+.page-question .wish-card .wish-copy { margin: 22px auto 24px; max-width: 405px; font-size: 14px; line-height: 1.75; }
+.page-question .buttons-area { width: 100%; justify-content: center; }
+.page-question .yes-btn { min-width: 0; flex: 1 1 205px; }
+.page-question .no-btn { min-width: 110px; flex: 0 0 auto; }
+.page-question .answer-message { margin: 19px auto 0; justify-content: center; text-align: center; min-height: 23px; }
+.meme-hint { margin: 12px 0 0; font-size: 11px; color: var(--gold); opacity: .86; line-height: 1.5; }
+.page-question .card-signature { justify-content: center; padding-top: 16px; }
+
+/* Trên máy tính meme là các sticker Polaroid ngẫu nhiên ở hai bên.
+   JS chỉ cho phép tối đa 4 sticker ở mỗi bên, không đè lên lá thư. */
+.meme-field {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.meme-sticker {
+  position: absolute;
+  display: block;
+  padding: 9px 9px 23px;
+  width: 160px;
+  aspect-ratio: 1 / 1.03;
+  border: 1px solid #e8d2a7;
+  border-radius: 10px;
+  color: var(--ink);
+  background: #fff9ea;
+  box-shadow: 0 16px 36px rgba(0, 12, 8, .38), 0 3px 0 rgba(187, 137, 76, .32);
+  transform: rotate(var(--tilt));
+  transform-origin: center center;
+  cursor: zoom-in;
+  pointer-events: auto;
+  transition: box-shadow .2s ease, filter .2s ease;
+  animation: sticker-appear .36s cubic-bezier(.2, 1.55, .56, 1) both;
+}
+.meme-sticker::after {
+  content: "♥ merry christmas";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  font: italic 10px Georgia, serif;
+  text-align: center;
+  color: #9c594f;
+}
+.meme-sticker img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  object-fit: contain;
+  border-radius: 5px;
+}
+.meme-sticker:hover { filter: brightness(1.04); box-shadow: 0 20px 40px #0009; }
+@keyframes sticker-appear {
+  from { opacity: 0; transform: rotate(var(--tilt)) translateY(22px) scale(.6); }
+  to { opacity: 1; transform: rotate(var(--tilt)) translateY(0) scale(1); }
+}
+
+/* Trang Yes cũng đặt lời chúc và GIF chính giữa. */
+.page-thankyou .celebration-layout { justify-content: center; padding: 16px 0 24px; }
+.page-thankyou .celebration-card {
+  width: min(770px, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 42px 43px;
+  text-align: center;
+}
+.page-thankyou .celebration-copy { padding: 0; }
+.page-thankyou .celebration-copy .letter-kicker { margin: 23px 0 11px; }
+.page-thankyou .celebration-copy h1 { font-size: clamp(44px, 5vw, 65px); }
+.page-thankyou .celebration-copy .wish-copy, .page-thankyou .love-note { margin-left: auto; margin-right: auto; }
+.page-thankyou .celebration-picture { width: min(440px, 100%); transform: none; }
+.page-thankyou .celebration-image-box { height: 230px; }
+
+@media (max-width: 960px) {
+  /* Màn hình hẹp không đủ chỗ hai bên: xếp meme dạng cụm sticker
+     bên dưới câu hỏi, vẫn giữ nguyên phần giữa dễ đọc và dễ bấm. */
+  .question-scene { display: flex; flex-direction: column; align-items: center; gap: 22px; min-height: 0; }
+  .center-stage { order: 1; }
+  .meme-field {
+    position: relative;
+    inset: auto;
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    justify-items: center;
+    gap: 19px 14px;
+    width: min(415px, 100%);
+    min-height: 0;
+  }
+  .meme-field:empty { display: none; }
+  .meme-sticker {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: min(175px, 100%) !important;
+    align-self: start;
+  }
+  .page-question .wish-card { padding: 37px 32px 25px; }
+  .page-question .wish-card h1 { font-size: clamp(39px, 6vw, 60px); }
+}
+@media (max-width: 600px) {
+  .page-question .site-wrap { width: min(560px, calc(100% - 24px)); }
+  .question-scene { padding: 6px 0 15px; gap: 20px; }
+  .page-question .wish-card { padding: 36px 20px 24px; border-radius: 23px; }
+  .page-question .wish-card h1 { font-size: clamp(36px, 9vw, 48px); }
+  .page-question .wish-card .letter-kicker { margin-top: 24px; }
+  .central-gif-frame { width: min(235px, 100%); height: 187px; margin-top: 18px; }
+  .page-question .wish-card .wish-copy { margin: 18px auto 19px; font-size: 13px; }
+  .page-question .answer-btn { min-height: 52px; padding: 10px 13px; font-size: 12px; }
+  .page-question .yes-btn { flex: 1 1 165px; }
+  .page-question .no-btn { min-width: 105px; }
+  .meme-field { gap: 17px 10px; }
+  .meme-sticker { padding: 7px 7px 21px; }
+  .page-thankyou .celebration-card { padding: 34px 20px; gap: 18px; }
+  .page-thankyou .celebration-image-box { height: 210px; }
+}
+@media (max-width: 350px) {
+  .page-question .wish-card h1 { font-size: 34px; }
+  .page-question .answer-btn { gap: 6px; }
+  .page-question .no-btn { min-width: 92px; }
+}
+
+/* Ảnh meme xem nhanh ở điện thoại, không làm trang tự cuộn khỏi nút trả lời. */
+.mobile-meme-peek { display: none; }
+@media (max-width: 960px) {
+  .mobile-meme-peek {
+    display: block;
+    position: fixed;
+    z-index: 8;
+    bottom: 18px;
+    left: 15px;
+    width: min(132px, 34vw);
+    aspect-ratio: 1 / 1.05;
+    padding: 7px 7px 17px;
+    border: 1px solid #e9d8ba;
+    border-radius: 10px;
+    background: #fff8e9;
+    box-shadow: 0 15px 38px #0008;
+    transform: translateY(18px) rotate(-8deg) scale(.88);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .24s ease, transform .3s ease;
+  }
+  .mobile-meme-peek.visible { opacity: 1; transform: translateY(0) rotate(-8deg) scale(1); }
+  .mobile-meme-peek img { display: block; width: 100%; height: 100%; object-fit: contain; border-radius: 4px; }
+}
+
+/* Lời chúc riêng cho Nhã Uyên: chữ Việt rõ dấu và căn giữa trên mobile. */
+.page-thankyou .celebration-copy h1 {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-size: clamp(36px, 5vw, 58px);
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+.page-thankyou .celebration-copy .letter-kicker em,
+.page-thankyou .celebration-copy .love-note em {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  font-style: italic;
+  letter-spacing: normal;
+}
+@media (max-width: 600px) {
+  .page-thankyou .celebration-copy h1 { font-size: clamp(32px, 8.5vw, 44px); }
+  .page-thankyou .celebration-copy .letter-kicker { line-height: 1.7; }
+}
